@@ -1,4 +1,5 @@
-import { v4 as uuid} from "uuid";
+const v4 = require('uuid');
+const uuid = v4;
 
 const quizData = {
     "data" :[
