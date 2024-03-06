@@ -20,8 +20,8 @@ app.get('/', (req,res)=>{
 app.use('/quiz',quizRouter);
 
 app.post('/login', (req,res)=>{
-    console.log(req.body);
-    res.json(req.body);
+    const {username, password} = req.body;
+    res.json({username,password});
 })
 
 app.listen(process.env.PORT || PORT , ()=>{
