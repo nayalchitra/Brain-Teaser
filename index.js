@@ -9,9 +9,9 @@ app.get('/', (req,res)=>{
     res.send('Hi Chitra')
 })
 
-app.use('/', (req,res) =>{
-    res.send(data)
-})
+// app.use('/', (req,res) =>{
+//     res.send(data)
+// })
 
 app.listen(process.env.PORT || PORT , ()=>{
     console.log("server started");
