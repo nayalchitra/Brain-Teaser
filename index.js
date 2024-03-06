@@ -1,7 +1,7 @@
 const express = require('express');
 const quiz_data = require("./db/quiz_data");
 const cors = require('cors');
-const quizRoute = require('./routers/quizRouter');
+const quizRouter = require('./routers/quizRouter.js');
 const app = express();
 app.use(cors());
 
@@ -16,7 +16,7 @@ app.get('/', (req,res)=>{
 //     res.send(quiz_data.data);
 // })
 
-app.use('/quiz',quizRoute);
+app.use('/quiz',quizRouter);
 
 
 
