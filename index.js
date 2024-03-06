@@ -4,6 +4,7 @@ const cors = require('cors');
 const quizRouter = require('./routers/quizRouter.js');
 const app = express();
 app.use(cors());
+app.use(express.json());
 
 const PORT = 3000;
 
