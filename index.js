@@ -19,7 +19,9 @@ app.get('/', (req,res)=>{
 
 app.use('/quiz',quizRouter);
 
-
+app.post('/login', (req,res)=>{
+    console.log(req.body);
+})
 
 app.listen(process.env.PORT || PORT , ()=>{
     console.log("server started");
