@@ -1,7 +1,5 @@
-const express = require('express')
-
+const express = require('express');
 const quiz_data = require("./db/quiz_data");
-// import data from "./db/quiz_data";
 
 
 const app = express();
@@ -12,9 +10,11 @@ app.get('/', (req,res)=>{
     res.send(quiz_data)
 })
 
-// app.use('/', (req,res) =>{
-//     res.send(data)
-// })
+app.get('/quiz',(req,res)=>{
+    res.send(quiz_data);
+})
+
+
 
 app.listen(process.env.PORT || PORT , ()=>{
     console.log("server started");

@@ -2,10 +2,12 @@ import { v4 as uuid} from "uuid";
 
 const quizData = {
     "data" :[
-        id  = uuid(),
-        category="Geography",
-        description ="" ,
-        quiz = [
+        {
+            id  : uuid(),
+            category:"Geography",
+            image:"",
+            description : "geography quiz" ,
+            quiz : [
             {
                 id:uuid(),
                 question:"What teardrop shaped island country has maritime borders with the Maldives, and another country to its north?",
@@ -136,7 +138,21 @@ const quizData = {
                     }
                 ]
             }
-        ]
+            ]
+        },
+        {
+            id:uuid(),
+            category:"History",
+            description:"History quiz",
+            quiz:[
+                {
+
+                },
+                {
+                    
+                }
+            ]
+        }
     ],
 
 }
