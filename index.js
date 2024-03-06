@@ -7,11 +7,11 @@ const app = express();
 const PORT = 3000;
 
 app.get('/', (req,res)=>{
-    res.send(quiz_data)
+    res.send("hi chitra")
 })
 
 app.get('/quiz',(req,res)=>{
-    res.send(quiz_data);
+    res.send(quiz_data.data);
 })
 
 
