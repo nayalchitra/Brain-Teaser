@@ -1,5 +1,5 @@
-const v4 = require('uuid');
-const uuid = v4;
+const {v4:uuid} = require('uuid');
+
 
 const quizData = {
     "data" :[
