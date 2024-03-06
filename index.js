@@ -1,4 +1,4 @@
-import express from "express";
+const express = require('express')
 
 const quiz_data = require("./db/quiz_data");
 // import data from "./db/quiz_data";
