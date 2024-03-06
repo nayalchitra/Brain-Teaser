@@ -16,7 +16,7 @@ app.get('/', (req,res)=>{
 //     res.send(quiz_data.data);
 // })
 
-app.use('/',quizRoute);
+app.use('/quiz',quizRoute);
 
 
 
