@@ -21,7 +21,7 @@ app.use('/quiz',quizRouter);
 
 app.post('/login', (req,res)=>{
     console.log(req.body);
-    res.send(req.body);
+    res.json(req.body);
 })
 
 app.listen(process.env.PORT || PORT , ()=>{
