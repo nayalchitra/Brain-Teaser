@@ -1,5 +1,5 @@
 const express = require('express');
-const userData = require('../db/users');
+let userData = require('../db/users');
 const jwt = require('jsonwebtoken');
 const {v4:uuid} = require('uuid');
 
