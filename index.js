@@ -3,7 +3,7 @@ const quiz_data = require("./db/quiz_data");
 const cors = require('cors');
 const quizRouter = require('./routers/quizRouter.js');
 const userData = require('./db/users.js');
-
+const jwt = require('jsonwebtoken');
 
 const app = express();
 app.use(cors());
@@ -26,7 +26,8 @@ app.post('/login', (req,res)=>{
     const {username, password} = req.body;
     const isDataValid = userData.data.some((user)=>user.username === username && user.password === password);
     if(isDataValid){
-        res.json(`user ${username} logged in successfully`)
+        let token = jwt.sign({username},process.env.SECRET_KEY);
+        res.json({username, token,message:`user ${username} logged in successfully`})
     }
     else
         res.json({message:"invalid user"});
