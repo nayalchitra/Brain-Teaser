@@ -3,7 +3,7 @@ const cors = require('cors');
 const quizRouter = require('./routers/quizRouter.js');
 
 require('dotenv').config();
-const {loginRouter,signupRouter} = require('./routers/authRouter.js');
+const {loginRouter,signupRouter,authVerify} = require('./routers/authRouter.js');
 
 
 const app = express();

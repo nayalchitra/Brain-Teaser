@@ -3,6 +3,19 @@ const userData = require('../db/users');
 const jwt = require('jsonwebtoken');
 const {v4:uuid} = require('uuid');
 
+//middleware
+const authVerify = (req,res,next)=>{
+
+    const token = req.headers.authorization;
+    try{
+        const tokenDecode = jwt.verify(token, process.env.SECRET_KEY);
+        const userId = {userId:tokenDecode.id};
+        return next();
+    }catch(err){
+        console.log("error from server");
+    }
+}
+
 const signupHandler = (req,res)=>{
     const {username, password} = req.body;
     const alreadyExists = userData.data.some((user)=>user.username === username);
@@ -29,4 +42,4 @@ const loginHandler = (req,res)=>{
         res.json({message:"invalid user"});
 }
 
-module.exports = {loginHandler,signupHandler};
+module.exports = {loginHandler,signupHandler,authVerify};
