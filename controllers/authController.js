@@ -1,5 +1,5 @@
 const express = require('express');
-let userData = require('../db/users');
+const userData = require('../db/users');
 const jwt = require('jsonwebtoken');
 const {v4:uuid} = require('uuid');
 
@@ -12,7 +12,7 @@ const signupHandler = (req,res)=>{
     else{
         const id = uuid();
         const newUser ={id,username,password};
-        userData = [...userData.data,newUser];
+        userData.data = [...userData.data,newUser];
         const token = jwt.sign({id:username},process.env.SECRET_KEY);
         res.send({message:"successfully signed in"});
     }
