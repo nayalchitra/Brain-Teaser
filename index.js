@@ -3,7 +3,7 @@ const cors = require('cors');
 const quizRouter = require('./routers/quizRouter.js');
 
 require('dotenv').config();
-const loginRouter = require('./routers/loginRouter.js');
+const {loginRouter,signupRouter} = require('./routers/authRouter.js');
 
 
 const app = express();
@@ -20,6 +20,7 @@ app.get('/', (req,res)=>{
 app.use('/quiz',quizRouter);
 
 app.use('/login', loginRouter)
+app.use('/signup',signupRouter);
 
 app.listen(process.env.PORT || PORT , ()=>{
     console.log("server started");
