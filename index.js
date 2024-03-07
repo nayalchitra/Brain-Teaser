@@ -4,6 +4,7 @@ const cors = require('cors');
 const quizRouter = require('./routers/quizRouter.js');
 const userData = require('./db/users.js');
 const jwt = require('jsonwebtoken');
+require('dotenv').config();
 
 const app = express();
 app.use(cors());
