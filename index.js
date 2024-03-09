@@ -18,7 +18,7 @@ app.get('/', (req,res)=>{
     res.send(quizData)
 })
 
-app.use('/categories',categories);
+app.use('/categories',catgoryRouter);
 
 app.use('/quiz',quizRouter);
 
