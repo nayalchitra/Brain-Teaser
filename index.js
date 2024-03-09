@@ -4,7 +4,8 @@ const quizRouter = require('./routers/quizRouter.js');
 const {routeNotFound} = require('./routers/notFoundRoute.js');
 require('dotenv').config();
 const {loginRouter,signupRouter,authVerify} = require('./routers/authRouter.js');
-
+const quizData = require('./db/quiz_data.js');
+const catgoryRouter = require('./routers/categoryRouter.js');
 
 const app = express();
 app.use(cors());
@@ -14,8 +15,10 @@ const PORT = 3000;
 
 
 app.get('/', (req,res)=>{
-    res.send("hi chitra")
+    res.send(quizData)
 })
+
+app.use('/categories',categories);
 
 app.use('/quiz',quizRouter);
 
