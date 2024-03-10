@@ -6,7 +6,7 @@ const quizData = {
         {
             id  : uuid(),
             category:"Geography",
-            image:"",
+            image:"https://www.bing.com/images/search?view=detailV2&ccid=ZEWBOOoU&id=1BCDBD6F0425FD25039DDD4DF23EC91D5F4408FF&thid=OIP.ZEWBOOoUAlOu7w60irpmdwHaDj&mediaurl=https%3a%2f%2fstatic.vecteezy.com%2fsystem%2fresources%2fpreviews%2f001%2f338%2f057%2fnon_2x%2fgeography-subject-with-worldmap-and-books-free-vector.jpg&exph=980&expw=2038&q=geography&simid=608038374764324180&FORM=IRPRST&ck=E7FAE2D9DD6AA4EEB7066D4A136A17C0&selectedIndex=11&itb=0",
             description : "geography quiz" ,
             quiz : [
             {
@@ -144,6 +144,7 @@ const quizData = {
         {
             id:uuid(),
             category:"History",
+            image:"https://www.bing.com/images/search?view=detailV2&ccid=RPMkdL5E&id=F4513D8E1FF0EAB262DF1FB7AA94B87BE11B5F6A&thid=OIP.RPMkdL5ENnQsvYuA2DL8YQHaE8&mediaurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.44f32474be4436742cbd8b80d832fc61%3frik%3dal8b4Xu4lKq3Hw%26riu%3dhttp%253a%252f%252fwww.nct.ac.in%252fassets%252fimg%252fhistory%252fslider%252f2.png%26ehk%3dtdBZUFMOVHvyoK1cBS3AypVbJxur913uqAQlMVnxufM%253d%26risl%3d%26pid%3dImgRaw%26r%3d0&exph=667&expw=1000&q=history&simid=607997551095782529&FORM=IRPRST&ck=DCA8806188DAB26307790B76B679DB57&selectedIndex=8&itb=0",
             description:"History quiz",
             quiz:[
                 {
